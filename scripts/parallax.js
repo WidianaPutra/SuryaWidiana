@@ -1,3 +1,10 @@
+setTimeout(function () {
+  $(".photo").css({
+    transform: "scale(1)",
+    transition: "transform 1s",
+  });
+}, 500);
+
 $(document).scroll(function () {
   const scrollValue = $(this).scrollTop();
   const tinggiDokumen = $(document).height();
@@ -19,25 +26,47 @@ $(document).scroll(function () {
       borderBottom: "1px solid #Fff",
       transition: "all 1s",
     });
+
+    $("#nav").css({
+      backgroundColor: "#007bff",
+      transition: "all 1s",
+    });
   } else {
     $(".container-navigation-bar").css({
       backgroundColor: "transparent",
       transiton: "all 1s",
       border: "none",
     });
+
+    $("#nav").css({
+      backgroundColor: "transparent",
+      transition: "all 1s",
+    });
+  }
+
+  //about
+  if (persScroll >= 21) {
+    $(".about-img").css({
+      transform: "translate(0%)",
+      transition: "1.5s",
+    });
+    $(".informasi-detail-about").css({
+      transform: "translate(0%)",
+      transition: "1.5s",
+    });
   }
 
   //project
   if (persScroll >= 36) {
-    $(".img1").css({transform: "scale(1)"})
+    $(".img1").css({ transform: "scale(1)" });
   }
   if (persScroll >= 45) {
-    $(".img2").css({transform: "scale(1)"})
+    $(".img2").css({ transform: "scale(1)" });
   }
   if (persScroll >= 60) {
-    $(".img3").css({transform: "scale(1)"})
+    $(".img3").css({ transform: "scale(1)" });
   }
   if (persScroll >= 71) {
-    $(".img4").css({transform: "scale(1)"})
+    $(".img4").css({ transform: "scale(1)" });
   }
 });

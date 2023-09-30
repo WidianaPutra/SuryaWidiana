@@ -14,7 +14,6 @@
 }
 /* global css close */
 
-
 /* navigation bar */
 .container-navigation-bar {
   position: fixed;
@@ -47,6 +46,7 @@
 
 .container-navigation-bar li {
   padding: 10px;
+  transition: transform 0.5s;
 }
 
 .container-navigation-bar a {
@@ -54,11 +54,10 @@
   color: white;
   font-family: var(--popin);
   cursor: pointer;
-  transition: all .5s;
 }
 
-.container-navigation-bar a:hover {
-  color: rgba(255, 255, 255, 0.805);
+.container-navigation-bar li:hover {
+  transform: scale(1.2);
 }
 
 @media screen and (max-width: 600px) {
@@ -69,9 +68,8 @@
   .container-navigation-bar ul {
     overflow: hidden;
     text-align: center;
-    background-color: var(--bluePrimary);
     width: 100%;
-    transition: all .5s;
+    transition: all 0.5s;
     flex-direction: column;
     z-index: 9;
     height: 0px;
@@ -96,9 +94,7 @@
     height: 190px;
   }
 }
-
 /* navigation bar close */
-
 
 /* section beranda */
 section#beranda {
@@ -109,6 +105,7 @@ section#beranda {
   align-items: center;
   background-image: url("../images/bg.png");
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   overflow: hidden;
@@ -117,7 +114,8 @@ section#beranda {
 #beranda img {
   height: 300px;
   border-radius: 50%;
-  border: 7px solid var(--bluePrimary);
+  border: 5px solid var(--bluePrimary);
+  transform: scale(0);
 }
 
 #beranda {
@@ -126,7 +124,7 @@ section#beranda {
 
 #beranda h1 {
   font-size: 30px;
-  color: var(--white)
+  color: var(--white);
 }
 
 #beranda p {
@@ -142,40 +140,77 @@ section#beranda {
 }
 /* section beranda close */
 
-
 /* section about */
 section#about {
+  display: flex;
+  width: 100%;
   flex-direction: column;
   background-color: #95bcfc;
 }
 
-section#about h1 {
-  padding: 50px;
-  font-size: 45px;
-  color: #333333;
+#about h1 {
+  font-size: 30px;
+  padding: 10px;
 }
 
-section#about .about-me p {
-  text-align: center;
-  font-size: 20px;
-  font-family: var(--robo);
-  width: 30%;
-  color: #333333;
+.container-contain-about {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container-contain-about img {
+  max-height: 400px;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+  transform: translate(-100%);
+}
+
+.informasi-detail-about {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px;
+  box-sizing: border-box;
+  transform: translate(200%);
+}
+
+.informasi-detail-about p {
+  font-size: 18px;
+  font-family: var(--popin);
+  font-weight: bold;
+  line-height: 2.2;
+}
+
+@media screen and (max-width: 900px) {
+  .container-contain-about {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container-contain-about img {
+    max-height: 300px;
+  }
+
+  .informasi-detail-about p {
+    font-size: 16px;
+    padding: 10px;
+  }
 }
 
 @media screen and (max-width: 400px) {
-  section#about h1 {
-    padding: 20px;
-    font-size: 40px;
-  }
-
-  section#about .about-me p {
-    width: 100%;
-    margin: 20px 0px;
-    font-size: 19px;
+  .informasi-detail-about p {
+    font-size: 13px;
+    width: 80%;
+    padding: 10px;
+    margin: auto;
   }
 }
-
 /* section about close */
 
 
@@ -200,7 +235,7 @@ section#project h1 {
   margin: 20px;
   border-radius: 10px;
   transition: all 1s;
-  transform: scale(.2);
+  transform: scale(0.2);
 }
 
 .card-container img {
@@ -227,7 +262,6 @@ section#project h1 {
 }
 
 /* project close */
-
 
 /* section contact */
 section#contact {
@@ -292,7 +326,7 @@ div#alert p {
   cursor: pointer;
 }
 
-div#alert>p>span {
+div#alert > p > span {
   font-weight: bold;
 }
 
@@ -313,7 +347,6 @@ div#alert>p>span {
 
 /* section contact close */
 
-
 footer {
   display: flex;
   width: 100%;
@@ -333,6 +366,6 @@ footer a {
   color: rgb(145, 0, 145);
 }
 
-footer>p>a:hover {
+footer > p > a:hover {
   text-decoration: underline;
 }
