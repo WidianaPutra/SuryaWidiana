@@ -7,7 +7,7 @@ let early = 0;
 hum.addEventListener('click', function () {
   nav.classList.toggle("humdown");
   early = (early + 1) % 2;
-  hum.setAttribute('src', `./portofolio/images/${early === 0  ? 'menu' : 'x'}.svg`);
+  hum.setAttribute('src', `./images/${early === 0  ? 'menu' : 'x'}.svg`);
 });
 
 document.querySelector('button').addEventListener('click', function () {
