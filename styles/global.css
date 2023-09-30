@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:ital,wght@1,300;1,400&display=swap');
+
+
+/* variable */
+:root {
+  --bluePrimary: #007bff;
+  --blueW: #e2edff;
+  --textColor: #000;
+  --green: #28a745;
+  --yellow: #ffc107;
+  --popin: poppins;
+  --robo: roboto;
+  --white: #fff;
+  --grey: #1e1e1e;
+  --link: rgb(109, 42, 190);
+}
+/* variable close */
+
+.blueP,.bluep {
+  color: var(--bluePrimary);
+}
+
+.txt {
+  color: #fff;
+}
+
+.txtGreen,.txtgreen {
+  color: var(--green);
+}
+
+.bgWhite,.bgwhite {
+  background-color: #fff;
+}
+
+.bgBlue,.bgblue {
+  background: var(--bluePrimary);
+}
+
+.spn {
+  color: var(--bluePrimary);
+}
+
+.dFlex,
+.dflex {
+  display: flex;
+}
+
+@media screen and (max-width: 400px) {
+  .dFlex,.dflex {
+    flex-direction: column;
+  }
+}
+
+.pop {
+  font-family: var(--popin);
+}
+
+.robot {
+  font-family: var(--robo);
+}
+
+.wmax,.wMax {
+  width: 100%;
+}
+.hmax,.hMax {
+  height: 100vh;
+}
+
+.hover {
+  color: #ffffffad;
+}
+
+.htransi,.hTransi {
+  transition: all .5s;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 400px) {
+  .center {
+    flex-direction: column;
+  }
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.dcolumn,.dColumn {
+  flex-direction: column;
+}
+
+.list {
+  width: 25%;
+}
+
+@media screen and (max-width: 400px) {
+  .list {
+    width: 57%;
+    margin: 10px;
+  }
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.l10,.L10 {
+  margin-left: 10px;
+}
+
+.r10,.R10 {
+  margin-right: 10px;
+}
+
+.t10,.T10 {
+  margin-top: 10px;
+}
+
+.b10,.B10 {
+  margin-bottom: 10px;
+}
+
+.tcenter,.tCenter {
+  text-align: center;
+}
+
+.bbotom,.bbotom  {
+  border-bottom: 1px #fff solid;
+}
+
+.borblue,.borBlue {
+  border: 4px solid var(--bluePrimary);
+}
+
+.listItem1,.listitem1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hmaxc,.hMaxc {
+  height: max-content;
+}
+
+.wmaxc,.wMaxc {
+  width: max-content;
+}
+
