@@ -153,18 +153,23 @@ section#about {
   padding: 10px;
 }
 
+.information {
+  scale: 0.2;
+}
+
 .container-contain-about {
   display: flex;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  gap: 30px;
 }
 
 .container-contain-about img {
-  max-height: 400px;
+  max-height: 350px;
   border-radius: 20px;
   transition: transform 0.3s ease-in-out;
   transform: translate(-100%);
@@ -179,10 +184,11 @@ section#about {
 }
 
 .informasi-detail-about p {
-  font-size: 18px;
+  font-size: 16px;
   font-family: var(--popin);
   font-weight: bold;
   line-height: 2.2;
+  text-align: justify;
 }
 
 @media screen and (max-width: 900px) {
@@ -211,57 +217,35 @@ section#about {
     margin: auto;
   }
 }
+
 /* section about close */
 
-
-/* project */
-section#project h1 {
-  text-align: center;
-  padding: 20px;
-  font-size: 40px;
-  color: #333333;
-  font-family: var(--popin);
-  font-weight: bold;
+/*  skills start*/
+.skills-container {
+  width: 80%;
 }
 
-.card-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.skill-container {
+  width: 100%;
 }
-
-.card-container .card {
-  background-color: #dce9ff;
-  margin: 20px;
+.skill {
+  height: 50px;
+  width: 50px;
+  margin: 10px 0px;
   border-radius: 10px;
-  transition: all 1s;
-  transform: scale(0.2);
-}
-
-.card-container img {
-  width: 500px;
-}
-
-.card-container p {
-  font-size: 18px;
-  font-family: var(--popin);
-  padding: 10px;
-  color: #333333;
-  font-weight: bold;
-  text-align: center;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  color: white;
+  transition: width 2s;
 }
 
 @media screen and (max-width: 600px) {
-  .card {
-    width: 300px;
-  }
-  .card-container img {
-    width: 300px;
+  .skills-container {
+    width: 95%;
   }
 }
-
-/* project close */
+/*  skills end*/
 
 /* section contact */
 section#contact {

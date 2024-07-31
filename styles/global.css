@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:ital,wght@1,300;1,400&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:ital,wght@1,300;1,400&display=swap");
 
 /* variable */
 :root {
@@ -16,7 +15,8 @@
 }
 /* variable close */
 
-.blueP,.bluep {
+.blueP,
+.bluep {
   color: var(--bluePrimary);
 }
 
@@ -24,15 +24,18 @@
   color: #fff;
 }
 
-.txtGreen,.txtgreen {
+.txtGreen,
+.txtgreen {
   color: var(--green);
 }
 
-.bgWhite,.bgwhite {
+.bgWhite,
+.bgwhite {
   background-color: #fff;
 }
 
-.bgBlue,.bgblue {
+.bgBlue,
+.bgblue {
   background: var(--bluePrimary);
 }
 
@@ -46,7 +49,8 @@
 }
 
 @media screen and (max-width: 400px) {
-  .dFlex,.dflex {
+  .dFlex,
+  .dflex {
     flex-direction: column;
   }
 }
@@ -59,10 +63,12 @@
   font-family: var(--robo);
 }
 
-.wmax,.wMax {
+.wmax,
+.wMax {
   width: 100%;
 }
-.hmax,.hMax {
+.hmax,
+.hMax {
   height: 100vh;
 }
 
@@ -70,8 +76,9 @@
   color: #ffffffad;
 }
 
-.htransi,.hTransi {
-  transition: all .5s;
+.htransi,
+.hTransi {
+  transition: all 0.5s;
 }
 
 .pointer {
@@ -94,7 +101,8 @@
   border-radius: 50%;
 }
 
-.dcolumn,.dColumn {
+.dcolumn,
+.dColumn {
   flex-direction: column;
 }
 
@@ -113,46 +121,63 @@
   border: 1px solid black;
 }
 
-.l10,.L10 {
+.l10,
+.L10 {
   margin-left: 10px;
 }
 
-.r10,.R10 {
+.r10,
+.R10 {
   margin-right: 10px;
 }
 
-.t10,.T10 {
+.t10,
+.T10 {
   margin-top: 10px;
 }
 
-.b10,.B10 {
+.b10,
+.B10 {
   margin-bottom: 10px;
 }
 
-.tcenter,.tCenter {
+.tcenter,
+.tCenter {
   text-align: center;
 }
 
-.bbotom,.bbotom  {
+.bbotom,
+.bbotom {
   border-bottom: 1px #fff solid;
 }
 
-.borblue,.borBlue {
+.borblue,
+.borBlue {
   border: 4px solid var(--bluePrimary);
 }
 
-.listItem1,.listitem1 {
+.listItem1,
+.listitem1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.hmaxc,.hMaxc {
+.hmaxc,
+.hMaxc {
   height: max-content;
 }
 
-.wmaxc,.wMaxc {
+.wmaxc,
+.wMaxc {
   width: max-content;
 }
 
+.wave-up {
+  transform: rotate(180deg) translateY(1px);
+}
+
+.wave-down {
+  transform: rotate(180deg) translateY(-1px);
+}

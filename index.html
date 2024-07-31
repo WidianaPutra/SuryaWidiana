@@ -11,6 +11,8 @@
       integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/tailwind.config.js"></script>
     <title>Portofoli</title>
   </head>
 
@@ -29,7 +31,7 @@
           <a href="#about">About</a>
         </li>
         <li>
-          <a href="#project">Project</a>
+          <a href="#skills">Skills</a>
         </li>
         <li>
           <a href="#contact">Contact</a>
@@ -54,45 +56,104 @@
     <section id="about" class="wmax hmax center">
       <h1 class="robot tcenter">About Me</h1>
       <div class="container-contain-about">
-        <img src="./images/foto.jpg" alt="" class="about-img"/>
+        <img src="./images/foto.jpg" alt="" class="about-img" />
         <div class="informasi-detail-about">
-          <p>
-            Saya seorang siswa SMK jurusan RPL/PPGL. Mulai belajar coding
-            pada Agustus 2022. Saya sempat mengikuti Lomba Web Desain secara online bersama teman saya. Saat ini saya mampu dalam menggunakan teknologi
-            ReactJS dan jQuery.
-          </p>
+          <p>Nama: I Putu Surya Widiana Putra</p>
+          <p>Alamat: Ds. Cepaka, Br. Cepaka</p>
+          <p>Umur: 17 Tahun</p>
+          <p>Status: Pelajar</p>
+          <p>Sekolah: SMK Wira Harapan</p>
+          <p>Kejuruan: RPL (Rekayasa Perangkat Lunak)</p>
+          <p>Kelas: XI RPL 1</p>
+          <!-- 8 -->
         </div>
       </div>
     </section>
+    <div class="wave-up">
+      <img src="./images/wave3.svg" alt="" />
+    </div>
     <!-- about page close-->
 
-    <!-- project -->
-    <section id="project" class="wmax hmaxc">
-      <h1>My Project</h1>
-      <div class="card-container">
-        <div class="card img1">
-          <img src="./images/anime.png" alt="" />
-          <p>Dibuat dengan HTML,CSS beserta JavaScript</p>
+    <!-- skills start -->
+    <h1 class="text-3xl text-center py-2">Skills</h1>
+    <section class="container-project h-2/5 flex justify-center" id="skills">
+      <div class="skills-container">
+        <!--  -->
+        <div class="skill-container flex items-center">
+          <div class="skill">
+            <p>HTML</p>
+          </div>
+          <p class="p-3">60%</p>
         </div>
-
-        <div class="card img2">
-          <img src="./images/kape.png" alt="" />
-          <p>Dibuat dengan HTML dan CSS</p>
+        <div class="skill-container flex items-center">
+          <div class="skill">
+            <p>CSS</p>
+          </div>
+          <p class="p-3">56%</p>
         </div>
-
-        <div class="card img3">
-          <img src="./images/kenanganCoffee.png" alt="" />
-          <p>Dibuat dengan HTML,CSS beserta JavaScript</p>
+        <div class="skill-container flex items-center">
+          <div class="skill">
+            <p>Javascript</p>
+          </div>
+          <p class="p-3">65%</p>
         </div>
-
-        <div class="card img4">
-          <img src="./images/top.png" alt="" />
-          <p>Dibuat dengan HTML dan CSS</p>
+        <div class="skill-container flex items-center">
+          <div class="skill">
+            <p>Typescript</p>
+          </div>
+          <p class="p-3">43%</p>
         </div>
+        <div class="skill-container flex items-center">
+          <div class="skill">
+            <p>PHP</p>
+          </div>
+          <p class="p-3">43%</p>
+        </div>
+        <div class="skill-container flex items-center">
+          <div class="skill">
+            <p>Java</p>
+          </div>
+          <p class="p-3">27%</p>
+        </div>
+        <div class="skill-container flex items-center">
+          <div class="skill">
+            <p>React-Js</p>
+          </div>
+          <p class="p-3">67%</p>
+        </div>
+        <div class="skill-container flex items-center">
+          <div class="skill">
+            <p>Next-Js</p>
+          </div>
+          <p class="p-3">66%</p>
+        </div>
+        <div class="skill-container flex items-center">
+          <div class="skill">
+            <p>Express-Js</p>
+          </div>
+          <p class="p-3">65%</p>
+        </div>
+        <div class="skill-container flex items-center">
+          <div class="skill">
+            <p>React-Native</p>
+          </div>
+          <p class="p-3">82%</p>
+        </div>
+        <div class="skill-container flex items-center">
+          <div class="skill">
+            <p>TailwindCss</p>
+          </div>
+          <p class="p-3">84%</p>
+        </div>
+        <!--  -->
       </div>
     </section>
-    <!-- project close -->
+    <!-- skills end -->
 
+    <div class="wave-down">
+      <img src="./images/wave1.svg" alt="" />
+    </div>
+    <!-- svg -->
     <!-- contact -->
     <section id="contact" class="wmax hmaxc bgBlue txt">
       <h1>Contact Me</h1>
@@ -107,7 +168,7 @@
 
         <label for="" id="msg">Pesan</label>
         <input type="text" />
-        <button class="">Kirim</button>
+        <button class="bg-white">Kirim</button>
       </div>
     </section>
     <!-- contact close -->

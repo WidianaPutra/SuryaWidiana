@@ -1,9 +1,17 @@
-setTimeout(function () {
-  $(".photo").css({
-    transform: "scale(1)",
-    transition: "transform 1s",
-  });
-}, 500);
+$(document).ready(function () {
+  setTimeout(function () {
+    $(".information").css({
+      scale: 1,
+      transition: "scale 1.5s",
+    });
+  }, 200);
+  setTimeout(function () {
+    $(".photo").css({
+      transform: "scale(1)",
+      transition: "transform 1s",
+    });
+  }, 500);
+});
 
 $(document).scroll(function () {
   const scrollValue = $(this).scrollTop();
@@ -11,10 +19,8 @@ $(document).scroll(function () {
   const tinggiJendela = $(window).height();
 
   const persScroll = (scrollValue / (tinggiDokumen - tinggiJendela)) * 100;
+  // console.log(`Tinggi Jendela: ${persScroll}%`);
 
-  console.log(`Tinggi Jendela: ${persScroll}%`);
-
-  // console.log(scrollValue);
   $(".contain-beranda").css({
     transform: `translateY(${scrollValue / 1.5}px)`,
     zIndex: 0,
@@ -45,7 +51,7 @@ $(document).scroll(function () {
   }
 
   //about
-  if (persScroll >= 21) {
+  if (persScroll >= 15) {
     $(".about-img").css({
       transform: "translate(0%)",
       transition: "1.5s",
@@ -56,17 +62,21 @@ $(document).scroll(function () {
     });
   }
 
-  //project
-  if (persScroll >= 36) {
-    $(".img1").css({ transform: "scale(1)" });
-  }
+  // skills
+  const persen = [60, 56, 65, 43, 43, 27, 67, 66, 65, 82, 84];
+  const skill = $("div.skill");
+  let color = "";
+
   if (persScroll >= 45) {
-    $(".img2").css({ transform: "scale(1)" });
-  }
-  if (persScroll >= 60) {
-    $(".img3").css({ transform: "scale(1)" });
-  }
-  if (persScroll >= 71) {
-    $(".img4").css({ transform: "scale(1)" });
+    skill.each(function (i, el) {
+      if (persen[i] >= 80) color = "#007bff";
+      if (persen[i] < 80 && persen[i] >= 55) color = "#28a745";
+      if (persen[i] < 54) color = "#da373d";
+
+      $(el).css({
+        width: persen[i] + "%",
+        // transition: "width 1s esse",
+      });
+    });
   }
 });
