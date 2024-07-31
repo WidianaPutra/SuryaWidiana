@@ -67,7 +67,7 @@ $(document).scroll(function () {
   const skill = $("div.skill");
   let color = "";
 
-  if (persScroll >= 45) {
+  if (persScroll >= 47) {
     skill.each(function (i, el) {
       if (persen[i] >= 80) color = "#007bff";
       if (persen[i] < 80 && persen[i] >= 55) color = "#28a745";
@@ -75,7 +75,12 @@ $(document).scroll(function () {
 
       $(el).css({
         width: persen[i] + "%",
-        // transition: "width 1s esse",
+      });
+    });
+  } else {
+    skill.each(function (i, el) {
+      $(el).css({
+        width: "60px",
       });
     });
   }
