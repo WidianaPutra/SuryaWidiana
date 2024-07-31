@@ -106,7 +106,7 @@ section#beranda {
   background-image: url("../images/bg.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-attachment: fixed;
   overflow: hidden;
 }
