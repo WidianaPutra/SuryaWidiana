@@ -116,6 +116,7 @@ section#beranda {
   border-radius: 50%;
   border: 5px solid var(--bluePrimary);
   transform: scale(0);
+  aspect-ratio: 1/1;
 }
 
 #beranda {

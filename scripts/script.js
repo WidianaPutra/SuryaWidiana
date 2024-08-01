@@ -38,16 +38,40 @@ document.querySelector("button").addEventListener("click", function () {
   }, 500);
 });
 
-const persen = [60, 56, 65, 43, 43, 27, 67, 66, 65, 82, 84];
+const persen = [
+  { t: "HTML", p: 60 },
+  { t: "Css", p: 56 },
+  { t: "Javascript", p: 65 },
+  { t: "Typescript", p: 43 },
+  { t: "PHP", p: 43 },
+  { t: "Java", p: 27 },
+  { t: "React-Js", p: 67 },
+  { t: "Next-Js", p: 66 },
+  { t: "Express-Js", p: 65 },
+  { t: "React-Native", p: 82 },
+  { t: "TailwindCss", p: 84 },
+  { t: "Bootstrap", p: 15 },
+];
 const skill = document.querySelectorAll("div.skill");
+const containerSkills = document.querySelector("div.skills-container");
 let color = "";
+let ui = ``;
 
-skill.forEach(function (el, i) {
-  if (persen[i] >= 80) color = "#007bff";
-  if (persen[i] < 80 && persen[i] >= 55) color = "#28a745";
-  if (persen[i] < 54) color = "#da373d";
+persen.forEach(function (el, i) {
+  if (el.p >= 80) color = "#007bff";
+  if (el.p < 80 && el.p >= 55) color = "#28a745";
+  if (el.p < 54) color = "#da373d";
 
-  el.style.backgroundColor = color;
+  ui += `
+   <div class="skill-container flex items-center" style="display: flex; align-items: center;">
+      <div class="skill bg-red" style="background-color: ${color};">
+        <p>${el.t}</p>
+      </div>
+      <p class="p-3">${el.p}%</p>
+    </div>
+  `;
 });
+
+containerSkills.innerHTML = ui;
 // containerSkills.innerHTML = ui;
 // 45

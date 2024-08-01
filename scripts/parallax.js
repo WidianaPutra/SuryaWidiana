@@ -1,3 +1,4 @@
+// ready
 $(document).ready(function () {
   setTimeout(function () {
     $(".information").css({
@@ -13,6 +14,7 @@ $(document).ready(function () {
   }, 500);
 });
 
+// scroll
 $(document).scroll(function () {
   const scrollValue = $(this).scrollTop();
   const tinggiDokumen = $(document).height();
@@ -63,18 +65,31 @@ $(document).scroll(function () {
   }
 
   // skills
-  const persen = [60, 56, 65, 43, 43, 27, 67, 66, 65, 82, 84];
+  const persen = [
+    { t: "HTML", p: 60 },
+    { t: "Css", p: 56 },
+    { t: "Javascript", p: 65 },
+    { t: "Typescript", p: 43 },
+    { t: "PHP", p: 43 },
+    { t: "Java", p: 27 },
+    { t: "React-Js", p: 67 },
+    { t: "Next-Js", p: 66 },
+    { t: "Express-Js", p: 65 },
+    { t: "React-Native", p: 82 },
+    { t: "TailwindCss", p: 84 },
+    { t: "Bootstrap", p: 15 },
+  ];
   const skill = $("div.skill");
   let color = "";
 
   if (persScroll >= 47) {
     skill.each(function (i, el) {
-      if (persen[i] >= 80) color = "#007bff";
-      if (persen[i] < 80 && persen[i] >= 55) color = "#28a745";
-      if (persen[i] < 54) color = "#da373d";
+      if (persen[i].p >= 80) color = "#007bff";
+      if (persen[i].p < 80 && persen[i].p >= 55) color = "#28a745";
+      if (persen[i].p < 54) color = "#da373d";
 
       $(el).css({
-        width: persen[i] + "%",
+        width: persen[i].p + "%",
       });
     });
   } else {
